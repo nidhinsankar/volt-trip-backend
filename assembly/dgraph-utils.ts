@@ -1,6 +1,7 @@
 import { dgraph } from "@hypermode/modus-sdk-as";
 import { JSON } from "json-as";
 import { JSON as JSON_TREE } from "assemblyscript-json/assembly/index";
+import { Float } from "assemblyscript-json/assembly/JSON";
 
 
 @json
@@ -199,7 +200,7 @@ export function addEmbeddingToJson(
   predicate: string,
   embedding: f32[],
 ): string {
-  return addFieldToJson(payload, predicate, `"${JSON.stringify(embedding)}"`);
+  return addFieldToJson(payload, predicate, JSON.stringify(embedding));
 }
 
 export function addTagsToJson(payload: string, tags: string[]): string {
