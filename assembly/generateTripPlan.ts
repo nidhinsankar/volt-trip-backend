@@ -12,7 +12,7 @@ const INSTRUCTION = `{
           "address": "string",
           "image": "string (URL)",
           "type":"stay_hotels"|"eatery_hotels"|"place"|"transportation",
-          "tags": ["resort", "hostel","boutique","five-start","bed-and-breakfast","vegan-options","sea-view","free-wifi","breakfast-included","rooftop-dining","fine-dining"],
+          "tags": ["name-of-the-location","resort", "hostel","boutique","five-start","bed-and-breakfast","vegan-options","sea-view","free-wifi","breakfast-included","rooftop-dining","fine-dining"],
           "cost_option": "cheap | moderate | costly",
           "description": "string"
         }
@@ -24,7 +24,7 @@ const INSTRUCTION = `{
         "address": "string",
         "image": "string (URL)",
         "type":"stay_hotels"|"eatery_hotels"|"place"|"transportation",
-        "tags": ["landmark", "museum","nature","cultural","national-park","mountain","beach","waterfall","heritage-site","wildlife],
+        "tags": ["name-of-the-location","landmark", "museum","nature","cultural","national-park","mountain","beach","waterfall","heritage-site","wildlife],
         "cost_option": "cheap | moderate | costly",
         "description": "string"
       }
@@ -36,7 +36,7 @@ const INSTRUCTION = `{
         "address": "string",
         "image": "string (URL)",
         "type":"stay_hotels"|"eatery_hotels"|"place"|"transportation",
-        "tags": ["public", "private","express","luxury","budget","non-stop","shared","air-conditioned","on-demand"],
+        "tags": ["name-of-the-location","public", "private","express","luxury","budget","non-stop","shared","air-conditioned","on-demand"],
         "cost_option": "cheap | moderate | costly",
         "description": "string"
       }

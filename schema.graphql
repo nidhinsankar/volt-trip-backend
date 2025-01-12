@@ -1,0 +1,25 @@
+# Dgraph Schema for TripItem
+
+id: string @index(exact) .
+name: string @index(term) .
+type: string @index(exact) .
+price: string @index(term) .
+address: string @index(term) .
+image: string .
+tags: [string] @index(term) .
+cost_option: string @index(term) .
+description: string @index(fulltext) .
+embedding: float32vector @index(hnsw(metric:"cosine")) .
+
+type TripItem {
+  id
+  name
+  type
+  price
+  address
+  image
+  tags
+  cost_option
+  description
+  embedding
+}

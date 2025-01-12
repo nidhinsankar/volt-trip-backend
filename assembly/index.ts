@@ -97,7 +97,6 @@ export function getTripByType(type: string): TripItem[] {
       TripItem.name
       TripItem.price
       TripItem.type
-      TripItem.price
       TripItem.address
       TripItem.image
       TripItem.tags
@@ -153,13 +152,40 @@ export function getAllTags(): string[] {
   return tags;
 }
 
+// export function getAllType(): string[] {
+//   const query = new dgraph.Query(`{
+//     list(func: type(TripItem)) {
+//       type
+//     }
+//   }`);
+
+//   // Execute the query
+//   const response = dgraph.execute(DGRAPH_CONNECTION, new dgraph.Request(query));
+//   console.log(`${response}`);
+//   const data = JSON.parse(response.Json);
+//   console.log(`${data}`);
+//   // Extract all `type` values and deduplicate them
+//   const uniqueTypes = new Set<string>();
+//   if (data?.list) {
+//     for (const item of data?.list) {
+//       if (item.type) {
+//         for (const typeValue of item.type) {
+//           uniqueTypes.add(typeValue);
+//         }
+//       }
+//     }
+//   }
+//   console.log(`${uniqueTypes}`);
+//   // Convert the Set to an array
+//   return Array.from(uniqueTypes);
+// }
+
 export function getTripByTags(tags: string[]): TripItem[] {
   const body = `
       TripItem.id
       TripItem.name
       TripItem.price
       TripItem.type
-      TripItem.price
       TripItem.address
       TripItem.image
       TripItem.tags
@@ -175,7 +201,6 @@ export function getTripByTag(tag: string): TripItem[] {
       TripItem.name
       TripItem.price
       TripItem.type
-      TripItem.price
       TripItem.address
       TripItem.image
       TripItem.tags
